@@ -16,9 +16,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "concurrently": "^7.0.0",
-    "dotenv": "^16.0.0"
-  }
+  "license": "MIT"
 }
