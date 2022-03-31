@@ -2,8 +2,9 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 
-// Update below to match your own MongoDB connection string.
-const MONGO_URL = process.env.MONGO_URL;
+// const MONGO_URL = process.env.MONGO_URL;
+const MONGO_URL =
+  'mongodb+srv://nasa-project-user:XfB8my1VCGDWKHCI@cluster0.lxj5e.mongodb.net/nasa?retryWrites=true&w=majority';
 
 mongoose.connection.once('open', () => {
   console.log('MongoDB connection ready!');
@@ -24,4 +25,4 @@ async function mongoDisconnect() {
 module.exports = {
   mongoConnect,
   mongoDisconnect,
-}
+};

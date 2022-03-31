@@ -19,11 +19,24 @@ Keep in mind that we recommend you code along with us and use this only if you e
 ## Docker
 
 1. Ensure you have the latest version of Docker installed
-2. Run `docker build -t nasa-project .`
-3. Run `docker run -it -p 8000:8000 nasa-project`
+2. Run `docker build . -t username/nasa-project`
+3. Run `docker run -it -p 8000:8000 username/nasa-project`
+4. Run `docker push username/nasa-project`
 
 ## Running the Tests
 
-To run any automated tests, run `npm test`. This will: 
+To run any automated tests, run `npm test`. This will:
+
 * Run all the client-side tests: `npm test --prefix client`
-* Run all the server-side tests: `npm test --prefix server` 
+* Run all the server-side tests: `npm test --prefix server`
+
+## Running Docker on AWS
+
+* [Docker basics for Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html)
+
+1. sudo yum update -y
+2. sudo yum install docker
+3. sudo service docker start
+4. sudo usermod -a -G docker ec2-user
+5. docker info
+6. docker run --restart=always -p 8000:8000 username/nasa-project
