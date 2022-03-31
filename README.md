@@ -20,8 +20,8 @@ Keep in mind that we recommend you code along with us and use this only if you e
 
 1. Ensure you have the latest version of Docker installed
 2. Run `docker build . -t username/nasa-project`
-3. Run `docker run -it -p 8000:8000 username/nasa-project`
-4. Run `docker push username/nasa-project`
+3. Run `docker push username/nasa-project`
+4. Run `docker run -it -p 8000:8000 username/nasa-project`
 
 ## Running the Tests
 
@@ -40,3 +40,7 @@ To run any automated tests, run `npm test`. This will:
 4. Run `sudo usermod -a -G docker ec2-user`
 5. Run `docker info`
 6. Run `docker run --restart=always -p 8000:8000 username/nasa-project`
+
+## Nodejs Security
+
+* [NodeJS Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html)
